@@ -11,4 +11,3 @@ def check_login(login):
     pattern = re.compile(r'^[a-zA-Z][a-zA-Z0-9-_\.]{5,20}$')
     if pattern.match(login):
         return f'Good login'
-    
