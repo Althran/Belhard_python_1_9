@@ -4,3 +4,11 @@
 1. Длина от 5 до 20 символов
 2. Состоит из букв верхнего и нижнего регистра, цифр, знаков подчеркивания
 """
+import re
+
+
+def check_login(login):
+    pattern = re.compile(r'^[a-zA-Z][a-zA-Z0-9-_\.]{5,20}$')
+    if pattern.match(login):
+        return f'Good login'
+    
